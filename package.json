@@ -1,0 +1,110 @@
+{
+    "name": "raketa-service-boilerplate",
+    "version": "1.0.1",
+    "description": "Boilerplerplate for services",
+    "main": "./src/index.js",
+    "repository": "https://github.com/budarin/raketa-service-boilerplate.git",
+    "author": "Vadim Budarin <budarin-vv@yandex.ru>",
+    "license": "MIT",
+    "config": {
+        "cz-customizable": {
+            "config": "./config/git/commitizen.js"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": [
+            "sh ./scripts/ts-lint.sh"
+        ],
+        "*.{js,ts,json}": [
+            "sh ./scripts/es-lint.sh"
+        ],
+        "*.{js,ts}": [
+            "sh ./scripts/utils/jest-staged-tests.sh"
+        ],
+        "*.{js,jsx,ts,tsx,json,md,css,html}": [
+            "prettier --write"
+        ]
+    },
+    "dependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.17.10",
+        "@babel/plugin-transform-react-constant-elements": "^7.17.6",
+        "@babel/plugin-transform-react-inline-elements": "^7.16.7",
+        "@babel/preset-env": "^7.17.10",
+        "@babel/preset-typescript": "^7.16.7",
+        "@fastify/cookie": "^6.0.0",
+        "@types/jest": "^27.5.0",
+        "@types/node": "^17.0.31",
+        "@types/pg": "^8.6.5",
+        "@types/webpack-env": "^1.16.4",
+        "@typescript-eslint/eslint-plugin": "^5.22.0",
+        "@typescript-eslint/parser": "^5.22.0",
+        "ajv": "^6.12.6",
+        "babel-jest": "^28.0.3",
+        "babel-loader": "^8.2.4",
+        "babel-plugin-react-local": "^0.7.1",
+        "babel-plugin-strip-function-call": "^1.0.2",
+        "babel-plugin-transform-imports": "^2.0.0",
+        "babel-plugin-transform-promise-to-bluebird": "^2.0.0",
+        "babel-plugin-transform-remove-console": "^6.9.4",
+        "bluebird": "^3.7.2",
+        "circular-dependency-plugin": "^5.2.2",
+        "containerized": "^1.0.2",
+        "core-js": "3.22.4",
+        "core-js-builder": "^3.22.4",
+        "core-js-compat": "^3.22.4",
+        "dotenv": "^16.0.0",
+        "eslint": "^8.13.0",
+        "eslint-plugin-deprecate": "^0.7.0",
+        "eslint-plugin-fp": "^2.3.0",
+        "eslint-plugin-jest": "^26.1.4",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-only-ascii": "^0.0.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-react": "^7.29.4",
+        "eslint-plugin-react-hooks": "^4.5.0",
+        "eslint-plugin-react-perf": "^3.3.1",
+        "eslint-plugin-regexp": "^1.6.0",
+        "eslint-plugin-security": "^1.4.0",
+        "eslint-plugin-testing-library": "^5.3.1",
+        "fast-json-stringify": "^2.5.2",
+        "fastify": "^3.29.0",
+        "fastify-plugin": "^3.0.1",
+        "happypack": "^5.0.1",
+        "husky": "^7.0.4",
+        "inspectpack": "^4.7.1",
+        "jest": "^28.0.3",
+        "json-loader": "^0.5.7",
+        "json-schema-traverse": "^1.0.0",
+        "long": "^5.2.0",
+        "pg": "^8.7.3",
+        "pino": "^7.11.0",
+        "prom-client": "^14.0.1",
+        "terser-webpack-plugin": "^5.3.1",
+        "typescript": "^4.6.4",
+        "under-pressure": "^5.8.1",
+        "unused-files-webpack-plugin": "^3.4.0",
+        "webpack": "^5.72.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-deadcode-plugin": "^0.1.16",
+        "webpack-node-externals": "^3.0.0",
+        "zx": "^6.1.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^16.2.4",
+        "@statoscope/webpack-plugin": "^5.20.1",
+        "commitizen": "^4.2.4",
+        "cz-customizable": "^6.3.0",
+        "lint-staged": "^12.4.1",
+        "pino-pretty": "^7.6.1",
+        "prettier": "^2.6.2",
+        "run-script-webpack-plugin": "^0.0.11"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "scripts": {
+        "start": "sh ./scripts/start.sh"
+    }
+}
